@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #55606d;
+    /* background-color: #3a4452; */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 370px;
+    height: 370px;
+}
+
+.clock{
+    background-color: #3a4452;
+    box-shadow: -8px -8px 18px rgba(255, 255, 255, 0.176), 8px 8px 15px rgba(0, 0, 0, 0.398) , 0px 0px 17px rgba(0, 0, 0, 0.398) inset;
+
+    border: 4px solid #535e6e;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.numbers{
+    /* background-color: rgb(73, 200, 75); */
+    transform: rotate(calc(30deg* var(--i)));
+    position: absolute;
+    inset: 10px;
+    text-align: center;
+}
+
+span{
+    display: inline-block;
+    transform: rotate(calc(-30deg* var(--i)));
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+   
+}
+
+.center-dot{
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.hand{
+  
+    position: absolute;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+#hr, #min ,#sec{
+    transform-origin: bottom;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 0px 0px  10px 1px rgba(0, 0, 0, 0.398);
+}
+#hr{
+    width: 6px;
+    height: 85px;
+    background-color: #ff3d58; 
+}
+#min{
+    width: 5px;
+    height: 105px;
+    background-color: #00a6ff;  
+}
+#sec{
+    width: 4px;
+    height: 125px;
+    background-color: white;   
+}
+
